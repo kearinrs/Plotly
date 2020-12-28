@@ -1,0 +1,36 @@
+---
+title: "Plotly presentation"
+author: "Roisin Kearins"
+date: "27 December 2020"
+output: ioslides_presentation
+---
+Solar <- read.csv("solar.csv")
+install.packages("plotly")
+install.packages("ggplot2")
+library(ggplot2)
+
+suppressPackageStartupMessages({library(plotly)})
+```{r}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+
+The Data set used was in relation to the number of solar plants within certain states in America. (This data could be outdated but was correct as of October 2018)
+
+## Slide with Plot
+
+```{r}
+x <- plot_ly(x = Solar$State,y = Solar$Number.of.Solar.Plants, type = "bar")
+
+x
+```
+
+## Slide with scatter plot
+
+```{r}
+scatter_plot3 <- plot_ly(x=Solar$State, y=Solar$Number.of.Solar.Plants,type='scatter',mode='markers',color = Solar$State, size = )
+scatter_plot3
+
+```
